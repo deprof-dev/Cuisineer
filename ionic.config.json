@@ -1,0 +1,7 @@
+{
+  "name": "Cuisineer",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
