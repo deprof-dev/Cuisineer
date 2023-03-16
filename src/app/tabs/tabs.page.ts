@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
 
-// import { ShoppingListPage } from '../shopping-list/shopping-list.page';
+import { ShoppingListPage } from '../shopping-list/shopping-list.page';
+import { RecipesPage } from '../recipes/recipes.page';
 
 @Component({
   selector: 'app-tabs',
@@ -17,5 +18,7 @@ export class TabsPage implements OnInit {
   ngOnInit() {
   }
 
+  slPage = ShoppingListPage;
+  recipes = RecipesPage
 
 }
