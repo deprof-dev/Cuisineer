@@ -3,6 +3,7 @@
     <ion-title>Shopping List</ion-title>
   </ion-toolbar>
 </ion-header>
+
 <ion-content class="ion-padding">
   <form>
     <ion-list>
@@ -14,6 +15,7 @@
           placeholder="Spaghetti"
         ></ion-input>
       </ion-item>
+
       <ion-item>
         <ion-label position="floating">Amount</ion-label>
         <ion-input type="number" name="amount" placeholder="1"></ion-input>
@@ -22,15 +24,17 @@
 
     <ion-button expand="block">Add Ingredient</ion-button>
   </form>
-</ion-content>
 
-<!-- <ion-header>
-  <ion-toolbar>
-    <ion-title>Shopping List</ion-title>
-  </ion-toolbar>
-</ion-header>
-<ion-content class="ion-padding">
-  <ion-nav-link router-direction="forward" [component]="slPage">
-    <ion-button>Go to Page Two</ion-button>
-  </ion-nav-link>
-</ion-content> -->
+  <ion-tabs>
+    <ion-tab-bar>
+      <ion-tab-button [routerLink]="['/']" tab="shopping-list">
+        <ion-icon name="list-circle-outline"></ion-icon>
+        <ion-label>Ingredients</ion-label>
+      </ion-tab-button>
+      <ion-tab-button [routerLink]="['/recipes']" tab="recipes">
+        <ion-icon name="book-outline"></ion-icon>
+        <ion-label>Recipes</ion-label>
+      </ion-tab-button>
+    </ion-tab-bar>
+  </ion-tabs>
+</ion-content>

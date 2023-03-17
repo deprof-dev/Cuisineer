@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+// import { ShoppingListPage } from '../shopping-list/shopping-list.page';
+
 @Component({
   selector: 'app-recipes',
   templateUrl: './recipes.page.html',
@@ -11,5 +13,4 @@ export class RecipesPage implements OnInit {
 
   ngOnInit() {
   }
-
 }

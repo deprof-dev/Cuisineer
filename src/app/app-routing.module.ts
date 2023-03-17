@@ -30,12 +30,12 @@ const routes: Routes = [
     pathMatch: 'full'
   },
   {
-    path: 'tabs',
-    loadChildren: () => import('./tabs/tabs.module').then(m => m.TabsPageModule)
+    path: 'shopping-list',
+    loadChildren: () => import('./shopping-list/shopping-list.module').then(m => m.ShoppingListPageModule)
   },
   {
     path: '',
-    redirectTo: 'tabs',
+    redirectTo: 'shopping-list',
     pathMatch: 'full'
   },
   {
