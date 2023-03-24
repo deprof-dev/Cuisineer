@@ -4,15 +4,17 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-tabs>
-  <ion-tab-bar>
-    <ion-tab-button [routerLink]="['/']" tab="shopping-list">
-      <ion-icon name="list-circle-outline"></ion-icon>
-      <ion-label>Ingredients</ion-label>
-    </ion-tab-button>
-    <ion-tab-button [routerLink]="['/recipes']" tab="recipes">
-      <ion-icon name="book-outline"></ion-icon>
-      <ion-label>Recipes</ion-label>
-    </ion-tab-button>
-  </ion-tab-bar>
-</ion-tabs>
+<ion-content class="ion-padding">
+  <ion-tabs>
+    <ion-tab-bar>
+      <ion-tab-button [routerLink]="['/']" tab="shopping-list">
+        <ion-icon name="list-circle-outline"></ion-icon>
+        <ion-label>Ingredients</ion-label>
+      </ion-tab-button>
+      <ion-tab-button [routerLink]="['/recipes']" tab="recipes">
+        <ion-icon name="book-outline"></ion-icon>
+        <ion-label>Recipes</ion-label>
+      </ion-tab-button>
+    </ion-tab-bar>
+  </ion-tabs>
+</ion-content>

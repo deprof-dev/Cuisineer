@@ -13,3 +13,14 @@ export class ShoppingListPage implements OnInit {
   }
 
 }
+// @Component({
+//   template: `
+    
+//   `,
+// })
+// export class FormsPage {
+//   todo = {}
+//   logForm() {
+//     console.log(this.todo)
+//   }
+// }

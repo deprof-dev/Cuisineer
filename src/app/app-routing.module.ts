@@ -30,10 +30,6 @@ const routes: Routes = [
     pathMatch: 'full'
   },
   {
-    path: 'shopping-list',
-    loadChildren: () => import('./shopping-list/shopping-list.module').then(m => m.ShoppingListPageModule)
-  },
-  {
     path: '',
     redirectTo: 'shopping-list',
     pathMatch: 'full'
