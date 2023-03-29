@@ -9,6 +9,11 @@ export class ShoppingListPage implements OnInit {
 
   constructor() { }
 
+
+  logForm(text: string) {
+    console.log(text)
+  }
+  
   ngOnInit() {
   }
 
