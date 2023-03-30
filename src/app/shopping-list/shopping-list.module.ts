@@ -6,15 +6,18 @@ import { IonicModule } from '@ionic/angular';
 
 import { ShoppingListPageRoutingModule } from './shopping-list-routing.module';
 
+
 import { ShoppingListPage } from './shopping-list.page';
+import { TabsComponent } from '../tabs/tabs.component';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    ShoppingListPageRoutingModule
+    ShoppingListPageRoutingModule,
   ],
-  declarations: [ShoppingListPage]
+  declarations: [ShoppingListPage, TabsComponent],
+  exports: [TabsComponent]
 })
-export class ShoppingListPageModule {}
+export class ShoppingListPageModule { }

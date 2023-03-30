@@ -4,58 +4,19 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content class="ion-padding">
-  <!-- <form>
-    <ion-list>
-      <ion-item>
-        <ion-label position="floating">Ingredient</ion-label>
-        <ion-input
-          type="text"
-          name="ingredientName"
-          placeholder="Spaghetti"
-        ></ion-input>
-      </ion-item>
-
-      <ion-item>
-        <ion-label position="floating">Amount</ion-label>
-        <ion-input type="number" name="amount" placeholder="1"></ion-input>
-      </ion-item>
-    </ion-list>
-
-    <ion-button expand="block">Add Ingredient</ion-button>
-  </form> -->
-
-  <form>
+<ion-content [fullscreen]="true" class="ion-padding">
+  <form class="ion-padding">
     <ion-item>
-      <ion-label position="floating">Ingredient</ion-label>
-      <ion-input
-        type="text"
-        name="Ingredient"
-        placeholder="Spaghetti"
-        required
-        [(ngModel)]="logForm"
-        #name="ngModel"
-      ></ion-input>
+      <ion-label>Ingredient:</ion-label>
+      <ion-input label="ingredient" placeholder="Milk"></ion-input>
     </ion-item>
     <ion-item>
-      <ion-label position="floating">Amount</ion-label>
-      <ion-input type="number" name="amount" placeholder="1"></ion-input>
+      <ion-label>Quantity:</ion-label>
+      <ion-input label="quantity" placeholder="1"></ion-input>
     </ion-item>
-    <ion-button expand="block" type="submit" expand="block"
-      >Add Ingredient</ion-button
-    >
   </form>
 
-  <ion-tabs>
-    <ion-tab-bar>
-      <ion-tab-button [routerLink]="['/']" tab="shopping-list">
-        <ion-icon name="list-circle-outline"></ion-icon>
-        <ion-label>Ingredients</ion-label>
-      </ion-tab-button>
-      <ion-tab-button [routerLink]="['/recipes']" tab="recipes">
-        <ion-icon name="book-outline"></ion-icon>
-        <ion-label>Recipes</ion-label>
-      </ion-tab-button>
-    </ion-tab-bar>
-  </ion-tabs>
+  <ion-button expand="block">Add Item</ion-button>
+
+  <app-tabs></app-tabs>
 </ion-content>

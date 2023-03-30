@@ -9,23 +9,7 @@ export class ShoppingListPage implements OnInit {
 
   constructor() { }
 
-
-  logForm(text: string) {
-    console.log(text)
-  }
-  
   ngOnInit() {
   }
 
 }
-// @Component({
-//   template: `
-    
-//   `,
-// })
-// export class FormsPage {
-//   todo = {}
-//   logForm() {
-//     console.log(this.todo)
-//   }
-// }
