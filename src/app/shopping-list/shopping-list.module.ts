@@ -9,6 +9,7 @@ import { ShoppingListPageRoutingModule } from './shopping-list-routing.module';
 
 import { ShoppingListPage } from './shopping-list.page';
 import { TabsComponent } from '../tabs/tabs.component';
+import { ButtonComponent } from '../button/button.component';
 
 @NgModule({
   imports: [
@@ -17,7 +18,7 @@ import { TabsComponent } from '../tabs/tabs.component';
     IonicModule,
     ShoppingListPageRoutingModule,
   ],
-  declarations: [ShoppingListPage, TabsComponent],
-  exports: [TabsComponent]
+  declarations: [ShoppingListPage, TabsComponent, ButtonComponent],
+  exports: [TabsComponent, ButtonComponent]
 })
 export class ShoppingListPageModule { }

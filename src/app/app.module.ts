@@ -10,10 +10,14 @@ import { ShoppingListPageModule } from './shopping-list/shopping-list.module';
 import { RecipePageModule } from './recipe/recipe.module';
 import { RecipesPageModule } from './recipes/recipes.module';
 import { EditRecipePageModule } from './edit-recipe/edit-recipe.module';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { TabsComponent } from './tabs/tabs.component';
+import { ButtonComponent } from './button/button.component';
 
 @NgModule({
-  declarations: [AppComponent],
-  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, RecipePageModule, RecipesPageModule, EditRecipePageModule, ShoppingListPageModule,],
+  declarations: [AppComponent, TabsComponent, ButtonComponent],
+  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, RecipePageModule, RecipesPageModule, EditRecipePageModule, ShoppingListPageModule, HttpClientModule, FormsModule, ReactiveFormsModule],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
   bootstrap: [AppComponent],
 })

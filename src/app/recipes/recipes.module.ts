@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
+import { TabsComponent } from '../tabs/tabs.component';
 
 import { RecipesPageRoutingModule } from './recipes-routing.module';
 
@@ -17,6 +18,7 @@ import { ShoppingListPageModule } from '../shopping-list/shopping-list.module';
     RecipesPageRoutingModule,
     ShoppingListPageModule
   ],
-  declarations: [RecipesPage],
+  declarations: [RecipesPage, TabsComponent],
+  exports: [TabsComponent,]
 })
 export class RecipesPageModule { }
