@@ -13,7 +13,7 @@ export class ShoppingListPage implements OnInit {
   myForm: FormGroup;
 
   ingredient: string = '';
-  quantity: any = '';
+  quantity: number = 1;
 
   constructor(private router: Router, private http: HttpClient, private formBuilder: FormBuilder) {
     this.myForm = this.formBuilder.group({
@@ -27,25 +27,23 @@ export class ShoppingListPage implements OnInit {
   ngOnInit() {
   }
 
-  click() {
-    if (!this.ingredient || this.quantity) {
+  onClick() {
+    // form-value validation
+    if (!this.myForm.valid) {
       alert('Please enter something to add!')
+    } else {
+      const value = this.myForm.value
+      this.ingredient = value.ingredient;
+      this.quantity = value.quantity
+      // this.router.navigate(['/recipes',]);
     }
 
   }
-
-  // click() {
-  //   if (!this.ingredient || this.quantity) {
-  //     alert('Please enter something to add!')
-  //   }
 
   //   const newRecipe = {
   //     ingredient: this.ingredient,
   //     quantity: this.quantity
   //   }
-
-  //   this.ingredient = ''
-  //   this.quantity = ''
 
   //   this.http.post('http://localhost:3000/users', this.ingredient).subscribe(
   //     response => {
@@ -59,6 +57,4 @@ export class ShoppingListPage implements OnInit {
   //     }
   //   );
   // this.router.navigate(['/recipes'])
-}
-
 }

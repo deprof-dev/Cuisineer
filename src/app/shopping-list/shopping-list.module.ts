@@ -6,11 +6,6 @@ import { IonicModule } from '@ionic/angular';
 
 import { ShoppingListPageRoutingModule } from './shopping-list-routing.module';
 
-
-import { ShoppingListPage } from './shopping-list.page';
-import { TabsComponent } from '../tabs/tabs.component';
-import { ButtonComponent } from '../button/button.component';
-
 @NgModule({
   imports: [
     CommonModule,
@@ -18,7 +13,7 @@ import { ButtonComponent } from '../button/button.component';
     IonicModule,
     ShoppingListPageRoutingModule,
   ],
-  declarations: [ShoppingListPage, TabsComponent, ButtonComponent],
-  exports: [TabsComponent, ButtonComponent]
+  // declarations: [ShoppingListPage,],
+  // exports: [ShoppingListPage]
 })
 export class ShoppingListPageModule { }

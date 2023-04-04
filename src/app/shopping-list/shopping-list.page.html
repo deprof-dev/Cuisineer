@@ -5,9 +5,9 @@
 </ion-header>
 
 <ion-content [fullscreen]="true" class="ion-padding">
-  <form [formGroup]="myForm" (ngSubmit)="click()" class="ion-padding">
+  <form [formGroup]="myForm" (ngSubmit)="onClick()" class="ion-padding">
     <ion-item>
-      <ion-label>Ingredient:</ion-label>
+      <ion-label>Ingredient: </ion-label>
       <ion-input
         formControlName="ingredient"
         name="ingredient"
@@ -16,16 +16,15 @@
       ></ion-input>
     </ion-item>
     <ion-item>
-      <ion-label>Quantity:</ion-label>
+      <ion-label>Quantity: </ion-label>
       <ion-input
         formControlName="quantity"
         name="quantity"
         label="quantity"
         placeholder="1"
+        type="number"
       ></ion-input>
     </ion-item>
-    <app-button></app-button>
+    <ion-button type="submit" expand="block"> Add Item </ion-button>
   </form>
-
-  <app-tabs></app-tabs>
 </ion-content>

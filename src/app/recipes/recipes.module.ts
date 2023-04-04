@@ -8,7 +8,6 @@ import { TabsComponent } from '../tabs/tabs.component';
 import { RecipesPageRoutingModule } from './recipes-routing.module';
 
 import { RecipesPage } from './recipes.page';
-import { ShoppingListPageModule } from '../shopping-list/shopping-list.module';
 
 @NgModule({
   imports: [
@@ -16,9 +15,7 @@ import { ShoppingListPageModule } from '../shopping-list/shopping-list.module';
     FormsModule,
     IonicModule,
     RecipesPageRoutingModule,
-    ShoppingListPageModule
   ],
-  declarations: [RecipesPage, TabsComponent],
-  exports: [TabsComponent,]
+  declarations: [RecipesPage,],
 })
 export class RecipesPageModule { }
