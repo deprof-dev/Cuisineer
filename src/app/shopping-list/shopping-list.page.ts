@@ -11,9 +11,10 @@ import { HttpClient } from '@angular/common/http';
 
 export class ShoppingListPage implements OnInit {
   myForm: FormGroup;
+  // public alertButtons = ['OK'];
 
-  ingredient: string = '';
-  quantity: number = 1;
+  // ingredient: string = '';
+  // quantity: number = 1;
 
   constructor(private router: Router, private http: HttpClient, private formBuilder: FormBuilder) {
     this.myForm = this.formBuilder.group({
@@ -30,31 +31,23 @@ export class ShoppingListPage implements OnInit {
   onClick() {
     // form-value validation
     if (!this.myForm.valid) {
-      alert('Please enter something to add!')
+      alert('Please enter an ingredient or value to add!')
     } else {
-      const value = this.myForm.value
-      this.ingredient = value.ingredient;
-      this.quantity = value.quantity
-      // this.router.navigate(['/recipes',]);
+      const { ingredient, quantity } = this.myForm.value
+      // this.ingredient = ingredient;
+      // this.quantity = quantity
+      let newRecipe = {
+        ingredient,
+        quantity
+      }
+
+      this.http.post('http://localhost:3000/recipes', newRecipe).subscribe(
+        response => {
+
+          // Navigate to the next page with the form data
+          this.router.navigate(['/recipes', response]);
+        }),
+        this.myForm.reset();
     }
-
   }
-
-  //   const newRecipe = {
-  //     ingredient: this.ingredient,
-  //     quantity: this.quantity
-  //   }
-
-  //   this.http.post('http://localhost:3000/users', this.ingredient).subscribe(
-  //     response => {
-  //       console.log(response);
-
-  //       // Navigate to the next page with the form data
-  //       this.router.navigate(['/recipes', response]);
-  //     },
-  //     error => {
-  //       console.error(error);
-  //     }
-  //   );
-  // this.router.navigate(['/recipes'])
 }

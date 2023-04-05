@@ -13,7 +13,6 @@ import { EditRecipePageModule } from './edit-recipe/edit-recipe.module';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { TabsComponent } from './tabs/tabs.component';
-import { ButtonComponent } from './button/button.component';
 import { ShoppingListPage } from './shopping-list/shopping-list.page';
 
 @NgModule({
