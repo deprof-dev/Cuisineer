@@ -8,19 +8,12 @@
   <ion-card *ngFor="let recipe of recipes">
     <ion-card-header>
       <ion-card-title
-        >{{ recipe.ingredient }} 👉 {{ recipe.quantity}}</ion-card-title
+        >{{ recipe.ingredient }}: {{ recipe.quantity}}</ion-card-title
       >
       <p>
         You wrote to purchase {{ recipe.ingredient }} in {{ recipe.quantity}}
         places.
       </p>
     </ion-card-header>
-
-    <!-- <ion-card-content>
-      <p>
-        You wrote to purchase {{ recipe.ingredient }} in {{ recipe.quantity}}
-        places.
-      </p>
-    </ion-card-content> -->
   </ion-card>
 </ion-content>

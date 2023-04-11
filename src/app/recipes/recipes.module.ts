@@ -7,7 +7,6 @@ import { IonicModule } from '@ionic/angular';
 import { RecipesPageRoutingModule } from './recipes-routing.module';
 
 import { RecipesPage } from './recipes.page';
-import { RecipePage } from '../recipe/recipe.page';
 
 @NgModule({
   imports: [
