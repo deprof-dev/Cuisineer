@@ -1,11 +1,6 @@
 {
   "recipes": [
     {
-      "id": 1,
-      "ingredient": "milk",
-      "quantity": "5"
-    },
-    {
       "ingredient": "milk",
       "quantity": 8,
       "id": 2
@@ -34,6 +29,16 @@
       "ingredient": "laptop",
       "quantity": 3,
       "id": 7
+    },
+    {
+      "ingredient": "data",
+      "quantity": 3,
+      "id": 8
+    },
+    {
+      "ingredient": "milk",
+      "quantity": 45,
+      "id": 9
     }
   ]
 }
