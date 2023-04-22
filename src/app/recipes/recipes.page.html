@@ -5,16 +5,17 @@
 </ion-header>
 
 <ion-content class="ion-padding">
-  <div
-    *ngFor="let recipe of recipes"
-    (ondblclick)="deleteRecipe(recipe.id)"
-    [attr.recipeId]="recipe.id"
-    class="container"
-  >
+  <div *ngFor="let recipe of recipes" class="container">
     <p class="container__text">
       {{recipe.ingredient}} <br />
       <span> {{recipe.quantity}} </span>
     </p>
+
+    <ion-icon
+      class="container__icon"
+      (click)="deleteRecipe(recipe.id)"
+      name="close-circle-outline"
+    ></ion-icon>
   </div>
 
   <!--

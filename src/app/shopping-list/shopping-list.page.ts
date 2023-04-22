@@ -18,11 +18,6 @@ const httpOptions = {
 
 export class ShoppingListPage implements OnInit {
   myForm: FormGroup;
-  // public alertButtons = ['OK'];
-
-  // ingredient: string = '';
-  // quantity: number = 1;
-
   constructor(private router: Router, private http: HttpClient, private formBuilder: FormBuilder, private recipeService: RecipeService,) {
     this.myForm = this.formBuilder.group({
       ingredient: ['', Validators.required],
@@ -48,14 +43,9 @@ export class ShoppingListPage implements OnInit {
         quantity
       }
 
-      this.recipeService.uploadRecipe(newRecipe, httpOptions).subscribe((response) => this.router.navigate(['/recipes', response]))
-
-      // this.http.post('http://localhost:3000/recipes', newRecipe, httpOptions).subscribe(
-      //   response => {
-
-      // Navigate to the next page with the form data
-      //   this.router.navigate(['/recipes', response]);
-      // }),
+      this.recipeService.uploadRecipe(newRecipe, httpOptions).subscribe(() => {
+        alert("Item successfully added to list!")
+      })
       this.myForm.reset();
     }
   }

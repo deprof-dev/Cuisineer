@@ -1,44 +1,29 @@
 {
   "recipes": [
     {
-      "ingredient": "milk",
-      "quantity": 8,
+      "ingredient": "sugar",
+      "quantity": 4,
+      "id": 1
+    },
+    {
+      "ingredient": "rice",
+      "quantity": 6,
       "id": 2
     },
     {
-      "ingredient": "yoghurt",
-      "quantity": 4,
+      "ingredient": "sugar",
+      "quantity": 3,
       "id": 3
     },
     {
-      "ingredient": "yoghurt",
-      "quantity": 4,
+      "ingredient": "kerosene",
+      "quantity": "6 liters",
       "id": 4
     },
     {
-      "ingredient": "books",
-      "quantity": 14,
+      "ingredient": "indomie",
+      "quantity": "1 carton",
       "id": 5
-    },
-    {
-      "ingredient": " cha irs",
-      "quantity": 3,
-      "id": 6
-    },
-    {
-      "ingredient": "laptop",
-      "quantity": 3,
-      "id": 7
-    },
-    {
-      "ingredient": "data",
-      "quantity": 3,
-      "id": 8
-    },
-    {
-      "ingredient": "milk",
-      "quantity": 45,
-      "id": 9
     }
   ]
 }

@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Recipe } from 'src/Recipe';
-import { HttpClient, } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
@@ -20,8 +20,13 @@ export class RecipeService {
     return this.http.post(this.apiUrl, newRecipe, options)
   }
 
-  deleteRecipes(id: number): Observable<any> {
-    // const url = this.apiUrl
-    return this.http.delete<Recipe>(`${this.apiUrl}/${id}`)
+  updateRecipe(id: number, update: any): Observable<any> {
+    const url = `${this.apiUrl}/${id}`;
+    return this.http.put(url, update)
+  }
+
+  deleteRecipe(id: number): Observable<any> {
+    const url = `${this.apiUrl}/${id}`;
+    return this.http.delete(url);
   }
 }
